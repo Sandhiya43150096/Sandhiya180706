@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACE Prep Menu</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4; /* Light grey background */
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu-toggle {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .menu-button {
+            background-color: #4CAF50; /* Green button */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0px;
+            margin-top: 0px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: white;
+            width: 100%;
+            padding: 10px;
+            text-align: right;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .language-time {
+            display: flex;
+            align-items: center;
+        }
+
+        .language-time span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FACE Prep</div>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
+
+    <div class="content">
+        <button class="menu-button">Our Menu</button>
+        <h2>Explore Our Menu</h2>
+
+        <div class="image-grid">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnaJdLAj-lQH_3fkgenEBqH99qHX-iU3fgOQ&s" alt="Dish 1">
+            <img src="https://www.livemint.com/lm-img/img/2023/08/18/900x1600/taylor-kiser-POFG828-GQc-unsplash_1692340575438_1692340581861.jpg" alt="Dish 2">
+            <img src="https://i0.wp.com/kitchenflavours.net/wp-content/uploads/2022/05/Must-Try-Potato-Recipe.jpg?fit=666%2C999&ssl=1" alt="Dish 3">
+            <img src="https://tiimg.tistatic.com/fp/1/007/479/a-grade-100-pure-semi-soft-delicious-sweet-taste-fresh-milk-cake-562.jpg" alt="Dish 4">
+            <img src="https://i.ytimg.com/vi/4L3gqfDKzjk/maxresdefault.jpg" alt="Dish 5">
+            <img src="https://www.sharmispassions.com/wp-content/uploads/2022/06/ChickenGravy1-500x500.jpg" alt="Dish 6">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="language-time">
+            <span>ENG</span>
+            <span>15:22</span>
+            <span>04-03-2025</span>
+            <span>IN</span>
+        </div>
+    </footer>
+
+        
+</body>
+</html>
