@@ -1,0 +1,51 @@
+show databases;
+create database saThyabaMa;
+use sathyabama;
+create table ECE(
+sid int,
+sname varchar(30),
+smarks int
+);
+show tables from sathyabama;
+desc ece;
+insert into ece values (1001,'harshita',95,9259259170),(1002,'shivani',93,9374063961),(1003,'sandhiya',94,9625724646),(1004,'sharathika',92,9375145163);
+select * from ece;
+ALTER TABLE ece ADD(
+    semail varchar(25),sphone int8);
+ALTER TABLE ece DROP COLUMN semail;
+
+ALTER TABLE ece ADD(
+    scountry varchar(40) DEFAULT 'India'
+);
+
+ALTER TABLE ece RENAME column
+    scountry TO slocation;
+   
+UPDATE ece SET slocation = 'India'
+WHERE sid=1004;
+
+UPDATE ece SET slocation = 'China'
+WHERE sid=1003;
+
+UPDATE ece SET slocation = 'Japan'
+WHERE sid=1002;
+
+UPDATE ece SET slocation = 'Goa'
+WHERE sid=1001;
+
+UPDATE ece SET slocation = 'India' , smarks=30
+WHERE sid=1004;
+
+UPDATE ece SET smarks = smarks+1;
+
+UPDATE ece SET sphone='9723964934'
+WHERE sid=1001;
+
+UPDATE ece SET sphone='8525076428'
+WHERE sid=1002;
+
+UPDATE ece SET sphone='6328590929'
+WHERE sid=1003;
+
+UPDATE ece SET sphone='7309593957'
+WHERE sid=1004;
