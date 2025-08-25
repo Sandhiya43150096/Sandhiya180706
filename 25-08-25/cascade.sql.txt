@@ -1,0 +1,32 @@
+show databases;
+create database college;
+use college;
+CREATE TABLE Department(
+  DeptID INT PRIMARY KEY,
+  DeptName VARCHAR(20)
+);
+
+create table employees(
+  EmpID INT PRIMARY KEY,
+  EmpName VARCHAR(58),
+  DeptID INT ,
+    FOREIGN KEY(DeptID)REFERENCES Department(DeptID)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+INSERT INTO Department(DeptID,DeptName)
+VALUES(1001,'HR'),
+ (1002,'Finance'),
+      (1003,'IT');
+     
+INSERT INTO Employees (EmpID,EmpName,DeptID)
+VALUES (43130676,'RASHMI',1001),
+  (43130661,'SHIVANI',1002),
+  (43130665,'HARSHITA',1003);
+select * from department;
+select * from Employees;
+DELETE FROM Department WHERE DeptID = 1003;
+UPDATE Department
+SET DeptID = 2002
+WHERE Deptid = 1002;
