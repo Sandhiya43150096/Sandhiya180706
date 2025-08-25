@@ -1,0 +1,54 @@
+create database textile;
+use textile;
+
+create table fabric (
+  fabricid int primary key,
+  fabricname varchar(50)
+);
+
+insert into fabric (fabricid, fabricname) values
+(1, 'Cotton'),
+(2, 'Silk'),
+(3, 'Denim');
+
+create table products (
+  productid int primary key,
+  productname varchar(50),
+  fabricid int,
+  foreign key (fabricid) references fabric(fabricid)
+    on delete cascade
+    on update cascade
+);
+
+insert into products values
+(101, 'Shirt', 1),
+(102, 'Saree', 2),
+(103, 'Jeans', 3);
+
+select * from fabric;
+select * from products;
+
+update products set productname = 'T-Shirt' where productid = 101;
+
+delete from fabric where fabricid = 1;
+
+select * from fabric;
+select * from products;
+
+update fabric set fabricid = 20 where fabricid = 2;
+
+select * from fabric;
+select * from products;
+
+select fabricid AS Fabric_No, fabricname AS Fabric_Name
+from fabric;
+
+select productid AS Product_No, productname AS Product, fabricid AS Fabric_No
+from products;
+
+select productid AS Product_No, productname AS Product
+from products
+where productname LIKE '%ea%';
+select fabricid AS Fabric_No, fabricname AS Fabric_Name
+from fabric
+where fabricname LIKE '%in';
