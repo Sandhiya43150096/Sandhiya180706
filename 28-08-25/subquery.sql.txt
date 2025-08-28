@@ -1,0 +1,19 @@
+#subquery
+create database student;
+show databases;
+use student;
+
+create table sathyabama 
+(id int,
+name varchar(25));
+insert into sathyabama values (101,'Tamil'),(102,'Logesh'),(105,'Kathir');
+select * from sathyabama;
+
+create table UGC
+(id int,
+name varchar(25));
+insert into ugc values (505,'Tamil'),(100002,'Logesh'),(105,'Kathir');
+select * from ugc;
+
+select * from ugc where id=
+(select id from sathyabama where name="kathir");
