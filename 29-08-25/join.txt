@@ -1,0 +1,40 @@
+create database student;
+show databases;
+use student;
+create table student
+(sid int,
+sname varchar(60),
+sdepartment varchar(60)
+);
+insert into student values
+(101,'arun','ECE'),
+(102,'akash','CSE'),
+(103,'deepak','EEE'),
+(101,'raji','mech');
+
+select * from student;
+
+create table valueaddcoures
+(cid int,
+cname varchar(60)
+);
+insert into valueaddcoures values
+(103,'AI and ML');
+select * from valueaddcoures;
+
+select * from student cross join valueaddcoures;
+
+create table examresults
+(sid int not null,
+marks int
+);
+insert into examresults values(101,90),(103,96),(104,98);
+select * from examresults;
+select * from student inner join examresults where student.sid=examresults.sid;
+select * from student natural join examresults where student.sid=examresults.sid;
+select * from student left outer join examresults on student.sid=examresults.sid;
+select * from student right outer join examresults on student.sid=examresults.sid;
+
+select * from student left outer join examresults on student.sid=examresults.sid
+union
+select * from student right outer join examresults on student.sid=examresults.sid;
