@@ -1,0 +1,451 @@
+collection
+
+package nov_27;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Collection {
+    public static void main(String args[]) {
+
+        
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Pavi");
+        list.add("Kavi");
+        System.out.println(list);
+        list.add("priya");
+        System.out.println(list.get(1));
+
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1.add(1001);
+        list1.add(1002);
+        System.out.println(list1);
+
+        ArrayList<Character> chr = new ArrayList<Character>();
+        chr.add('m');
+        chr.add('v');
+        System.out.println(chr);
+
+        ArrayList<Boolean> bool = new ArrayList<Boolean>();
+        bool.add(true);
+        System.out.println(bool);
+
+
+        
+        int n = 100000;  
+        
+        long startArrayList = System.currentTimeMillis();
+
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            arr.add(i);
+        }
+
+        long endArrayList = System.currentTimeMillis();
+        System.out.println("Time taken by ArrayList: " + (endArrayList - startArrayList) + " ms");
+
+
+       
+        long startLinkedList = System.currentTimeMillis();
+
+        LinkedList<Integer> link = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            link.add(i);
+        }
+
+        long endLinkedList = System.currentTimeMillis();
+        System.out.println("Time taken by LinkedList: " + (endLinkedList - startLinkedList) + " ms");
+
+    }
+}
+
+Arraylistoperation
+
+package nov_27;
+import java.util.*;
+import java.util.Collection;
+public class Arraylistoperation {
+    public static void main(String[] args) {
+
+        
+        ArrayList<String> al = new ArrayList<>();
+        System.out.println("Initial list: " + al);
+
+       
+        al.add("Ravi");
+        al.add("Vijay");
+        al.add("Ajay");
+        System.out.println("After add(E element): " + al);
+
+        
+        al.add(1, "Gaurav");
+        System.out.println("After add(index, element): " + al);
+
+        
+        ArrayList<String> al2 = new ArrayList<>();
+        al2.add("Sonoo");
+        al2.add("Hanumat");
+        al.addAll(al2);
+        System.out.println("After addAll(Collection): " + al);
+
+       
+        ArrayList<String> al3 = new ArrayList<>();
+        al3.add("John");
+        al3.add("Rahul");
+        al.addAll(1, al3);
+        System.out.println("After addAll(index, Collection): " + al);
+
+        System.out.println("\n");
+
+       
+        ArrayList<String> removeList = new ArrayList<>();
+        removeList.addAll(al);
+
+        
+        removeList.remove("Vijay");
+        System.out.println("After remove(object): " + removeList);
+
+        
+        removeList.remove(0);
+        System.out.println("After remove(index): " + removeList);
+
+       
+        ArrayList<String> extraList = new ArrayList<>();
+        extraList.add("Sonoo");
+        extraList.add("Hanumat");
+        removeList.removeAll(extraList);
+        System.out.println("After removeAll(Collection): " + removeList);
+
+        
+        removeList.removeIf(str -> str.contains("Ajay"));
+        System.out.println("After removeIf() method: " + removeList);
+
+        
+        removeList.clear();
+        System.out.println("After clear() method: " + removeList);
+
+        System.out.println("\n");
+
+       
+        ArrayList<String> alRetain = new ArrayList<>();
+        alRetain.add("Ravi");
+        alRetain.add("Vijay");
+        alRetain.add("Ajay");
+
+        ArrayList<String> alRetain2 = new ArrayList<>();
+        alRetain2.add("Ravi");
+        alRetain2.add("Hanumat");
+
+        alRetain.retainAll(alRetain2); 
+        System.out.println("After retainAll() method:");
+        for (String s : alRetain) {
+            System.out.println(s);
+        }
+
+        System.out.println("\n");
+
+        
+        ArrayList<String> alEmpty = new ArrayList<>();
+        System.out.println("Is ArrayList Empty: " + alEmpty.isEmpty());
+
+        alEmpty.add("Ravi");
+        alEmpty.add("Vijay");
+        alEmpty.add("Ajay");
+
+        System.out.println("After insertion:");
+        System.out.println("Is ArrayList Empty: " + alEmpty.isEmpty());
+
+        System.out.println("\n");
+
+       
+        ArrayList<String> alReverse = new ArrayList<>();
+        alReverse.add("Ravi");
+        alReverse.add("Vijay");
+        alReverse.add("Ajay");
+
+        System.out.println("Original list for reverse: " + alReverse);
+
+        Collections.reverse(alReverse);
+        System.out.println("Reversed list: " + alReverse);
+    }
+}
+       
+Setoperation
+
+package nov_27;
+import java.util.*;
+
+public class Setoperation {
+    public static void main(String[] args) {
+
+        System.out.println(" HashSet Example ");
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Ravi");
+        hashSet.add("Vijay");
+        hashSet.add("Ravi"); 
+        hashSet.add("Ajay");
+
+        System.out.println("HashSet elements (unique, unordered):");
+        for (String s : hashSet) {
+            System.out.println(s);
+        }
+
+        System.out.println("\n LinkedHashSet Example ");
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Ravi");
+        linkedHashSet.add("Vijay");
+        linkedHashSet.add("Ravi"); 
+        linkedHashSet.add("Ajay");
+
+        System.out.println("LinkedHashSet elements (maintains insertion order):");
+        for (String s : linkedHashSet) {
+            System.out.println(s);
+        }
+
+        System.out.println("\n TreeSet Example ");
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.add("Ravi");
+        treeSet.add("Vijay");
+        treeSet.add("Ravi"); 
+        treeSet.add("Ajay");
+
+        System.out.println("TreeSet elements (sorted in ascending order):");
+        for (String s : treeSet) {
+            System.out.println(s);
+        }
+    }
+}
+
+
+
+Mapoperation
+
+package nov_27;
+import java.util.*;
+
+public class Mapoperation {
+    public static void main(String[] args) {
+
+       
+        System.out.println(" HashMap Example ");
+        HashMap<Integer, String> hashMap = new HashMap<>();
+
+       
+        hashMap.put(1, "Apple");
+        hashMap.put(2, "Banana");
+        hashMap.put(3, "Mango");
+        hashMap.put(1, "Grapes"); 
+
+        System.out.println("HashMap: " + hashMap);
+
+       
+        hashMap.remove(2);
+        System.out.println("After removing key 2: " + hashMap);
+
+        
+        hashMap.put(3, "Pineapple"); 
+        System.out.println("After updating key 3: " + hashMap);
+
+       
+        System.out.println("Traversing HashMap:");
+        for (Map.Entry<Integer, String> e : hashMap.entrySet()) {
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
+
+
+
+        
+        System.out.println("\nLinkedHashMap Example ");
+        LinkedHashMap<Integer, String> linkedMap = new LinkedHashMap<>();
+
+       
+        linkedMap.put(10, "Ravi");
+        linkedMap.put(20, "Vijay");
+        linkedMap.put(30, "Ajay");
+
+        System.out.println("LinkedHashMap: " + linkedMap);
+
+        
+        linkedMap.remove(10);
+        System.out.println("After removing key 10: " + linkedMap);
+
+       
+        linkedMap.put(30, "Gaurav");
+        System.out.println("After updating key 30: " + linkedMap);
+
+        
+        System.out.println("Traversing LinkedHashMap:");
+        for (Map.Entry<Integer, String> e : linkedMap.entrySet()) {
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
+
+
+
+       
+        System.out.println("\n TreeMap Example (Sorted) ");
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+
+       
+        treeMap.put(50, "Ravi");
+        treeMap.put(100, "Amit");
+        treeMap.put(150, "Vijay");
+
+        System.out.println("TreeMap (sorted by key): " + treeMap);
+
+        
+        treeMap.remove(100);
+        System.out.println("After removing key 100: " + treeMap);
+
+       
+        treeMap.put(150, "Harsh");
+        System.out.println("After updating key 150: " + treeMap);
+
+       
+        System.out.println("Traversing TreeMap:");
+        for (Map.Entry<Integer, String> e : treeMap.entrySet()) {
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
+    }
+}
+
+crud operation
+
+package CRUD;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class CRUD {
+
+    public static void main(String[] args) {
+        CRUD obj = new CRUD();
+        obj.create_data("1", "jinu", "jinu@gmail.com");
+        obj.create_data("2", "jawad", "jawad@gmail.com");
+
+        
+        obj.read_data();
+
+       
+        obj.update_data("2", "22", "jawad2", "jawad2@gmail.com");
+
+        
+        obj.read_data();
+
+        
+        obj.delete_data("1");
+
+       
+        obj.read_data();
+    }
+
+    public void create_data(String sl_no, String name, String email) {
+        try {
+            Connection con = new DB_Connection().get_connection();
+            PreparedStatement ps = con.prepareStatement("INSERT INTO user VALUES (?,?,?)");
+            ps.setString(1, sl_no);
+            ps.setString(2, name);
+            ps.setString(3, email);
+            ps.executeUpdate();
+            System.out.println("Inserted: " + sl_no + " - " + name + " - " + email);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void read_data() {
+        try {
+            Connection con = new DB_Connection().get_connection();
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM user");
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                System.out.println("Sl No : " + rs.getString("sl_no"));
+                System.out.println("Name  : " + rs.getString("name"));
+                System.out.println("Email : " + rs.getString("email"));
+                System.out.println("---------------------");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void update_data(String sl_no, String new_sl_no, String name, String email) {
+        try {
+            Connection con = new DB_Connection().get_connection();
+            PreparedStatement ps = con.prepareStatement(
+                "UPDATE user SET sl_no=?, name=?, email=? WHERE sl_no=?");
+            ps.setString(1, new_sl_no);
+            ps.setString(2, name);
+            ps.setString(3, email);
+            ps.setString(4, sl_no);
+            ps.executeUpdate();
+            System.out.println("Updated record with sl_no " + sl_no);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void delete_data(String sl_no) {
+        try {
+            Connection con = new DB_Connection().get_connection();
+            PreparedStatement ps = con.prepareStatement("DELETE FROM user WHERE sl_no=?");
+            ps.setString(1, sl_no);
+            ps.executeUpdate();
+            System.out.println("Deleted record with sl_no " + sl_no);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+jdbc operation
+
+package databaseConnection;
+import java.sql.*;
+public class JDBCConnection {
+
+	public static void main(String[] args) {
+try{
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection con=DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/saturday", "root", "root");
+     Statement stmt=con.createStatement();
+     ResultSet rs=stmt.executeQuery("select * from emp");
+     while(rs.next()) {
+     System.out.println(rs.getInt(1)+" "
+     +rs.getString(2)+ " " +rs.getInt(3));
+     }
+	 con.close();
+     }
+catch (Exception e) {
+     System.out.println("Dear Customer, Please check your program");
+	}
+
+}
+}
+
+db conection
+
+package CRUD;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DB_Connection {
+
+    public Connection get_connection() {
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/crud_db", 
+                    "root",                        
+                    "root"                              
+            );
+        } catch (Exception e) {
+            System.out.println("Connection Error: " + e);
+        }
+        return connection;
+    }
+}
+
+
