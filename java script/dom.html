@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM IN JS</title>
+</head>
+<body>
+
+    <div id="parent">
+    <h1 id="demo">Jaya</h1>
+    <h1 class="cls">Santo</h1>
+    <p>Arun</p>
+    <h1 id="last">Lavanya</h1>
+    <h1>Sudhir</h1>
+    <p class="cls">Abhi</p>
+    <p id="first">Surya</p>
+    <h2 class="cls">Dinesh</h2>
+    </div>
+
+    <script>
+        
+        //DOCUMENT.GETELEMENTBYID...IT WILL RETURN W.R.T ID...
+        let a=document.getElementById("demo")
+        console.log(a)
+
+        //DOCUMENT.GETELEMENTBYCLASSNAME...IT WILL RETURN ELEMENT IN THE FORM OF HTML COLLECTION...
+        let b=document.getElementsByClassName("cls")
+        console.log(b)
+
+        //DOCUMENT.GETELEMENTBYTAGNAME...IT WILL ALSO RETURN HTML COLLECTION W.R.T THE ELEMENT...
+        let c=document.getElementsByTagName("h1")
+        console.log(c)
+
+        //DOCUMENT.QUERYSELECTOR...IT WILL GIVE ONLY THE FIRST ELEMENT ALONE OF SAME TYPE...
+        let d=document.querySelector("p")
+        console.log(d)
+
+        //DOCUMENT.QUERYSELECTORALL...IT WILL GIVE ALL THE ELEMENTS ALONE OF SAME TYPE IN THE FORM OF NODELIST...
+        let e=document.querySelectorAll("p")
+        console.log(e)
+
+
+        //IN DOM WE HAVE DIFFERENT PROPERTIES
+        //DOCUMENT.HEAD
+        //DOCUMENT.BODY
+        //DOCUMENT.TITLE
+
+        //DOCUMENT HEAD...IT RETUTRNS ONLY HEAD PART FROM THE HTML DOC SEPERATELY...
+        console.log(document.head)
+
+         //DOCUMENT BODY...IT RETUTRNS ONLY BODY FROM THE HTML DOC SEPERATELY...
+        console.log(document.body)
+
+         //DOCUMENT TITLE...IT RETUTRNS ONLY TITLE OF THE DOCUMENT...
+        console.log(document.title)
+
+
+        //CREATING AN ELEMENT
+        let m=document.createElement("h1")
+        console.log(m)
+
+        //ADD CONTENT TO TAG WE USE INNER TEXT
+        m.innerText="Dinga"
+        console.log(m)
+
+        let n=document.createElement("p")
+        console.log(n)
+
+        n.innerText="Chinnu"
+        console.log(n)
+
+
+        //ADDING AN ELEMENT
+
+        let parent=document.getElementById("parent")
+        console.log(parent)
+
+        parent.appendChild(m)
+        console.log(parent)
+
+        //REMOVING AN ELEMENT
+
+        let last=document.getElementById("last")
+        last.remove()
+        console.log(parent)
+
+        let first=document.getElementById("first")
+        first.remove()
+        console.log(parent)
+
+        //STYLING BY REFERENCE FROM THE BODY
+
+        document.body.style.color="red"
+        document.body.style.backgroundColor="yellow"
+        document.body.style.border="5px solid black"
+        document.body.style.textAlign="center"
+
+        //STYLING BY TAKING REFERENCE FROM SINGLE ELEMENT
+
+        a.style.color="white"
+        a.style.backgroundColor="black"
+        a.style.padding="20px"
+        a.style.textAlign="left"
+        a.style.fontSize="40px"
+
+
+
+
+
+
+    </script>
+</body>
+</html>

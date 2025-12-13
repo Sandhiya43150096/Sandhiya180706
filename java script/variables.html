@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var
+
+        {
+         var a; //declaration
+         a=30; //initialization
+         console.log(a)
+
+         var a; //re-declaration
+         a=60;  //re-initialization
+         console.log(a)
+
+         var a=90; //re-declaration and re-initialization
+         console.log(a)
+        }
+
+        // let
+
+        {
+            let b; //declaration
+            b=20; //initialization
+            console.log(b)
+
+            // let b;(re-declaration not possible)
+            b=80; //re-initialization
+            console.log(b)
+        }
+
+        // const
+
+        {
+        // const c //declaration(not possible)
+        // c=100 //initialization(not possible)
+        const c=100; //both declaration and initialization should be done within the same line which is mandatory
+        console.log(c)
+        }
+        // console.log(c) (error since we are trying to access outside the block)
+
+        // Hoisting.....it is nothing but using the value before  declaring and initializing the 
+        // where this hoisting is possible only for var alone
+        // where it will give output as undefined when we do hoisting for var
+        // where for let and const hoisting is not possible as a result if we are trying to do hoisting it will throw error
+
+        console.log(d)
+        var d=20; //declaration and initialization
+
+        console.log(e)
+        let e=40 //declaration and initialization
+
+        console.log(f)
+        const f=60; //declaration and initialization
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //CREATING AN PROMISE...
+        let network="yes";
+
+        let mypromise=new Promise((resolve,reject)=>{
+            if(network=="yes"){
+                resolve("THE NETWORK IS AVAILABLE")
+            }
+            else{
+                reject("THE NETWORK IS NOT AVAILABLE...")
+            }
+    })
+
+    //HANDLING THE PROMISE...
+    mypromise
+    .then((resolve)=>{
+        console.log("THE NETWORK IS AVAILABLE")
+})
+.catch((reject)=>{
+    console.log("THE NETWORK IS NOT AVAILABLE")
+})
+.finally(()=>{
+    console.log("I AM FINALLY BLOCK...")
+})
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'OnePlus Sans', Arial, sans-serif;
+}
+
+body {
+    color: #565454;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #f5010c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #d4000a;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #f5010c;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid #f5010c;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f5010c;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(240, 189, 230);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-bar {
+    padding: 15px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f5010c;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.user-actions a {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: #f5010c;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://image01.oneplus.net/ebp/202401/09/1-M12-1-1920-950.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(51, 41, 205);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: rgb(227, 248, 193);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #f5010c;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: #9cb2d7;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.promo-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.promo-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Categories */
+.categories {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background-color: rgb(215, 70, 70);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 20px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f5010c;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

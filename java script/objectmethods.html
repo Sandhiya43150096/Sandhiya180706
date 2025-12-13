@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // //CREATING AN OBJECT BY USING OBJECT CONSTRUCTOR WAY...
+        // let obj=new Object()
+        // obj.name="Chinnu"
+        // obj.age=4
+        // obj.city="AP"
+        // console.log(obj)
+
+        //CREATING AN OBJECT BY USING OBJECT LITERAL WAY...
+        let obj1={
+            name:"Raju",
+            age:23,
+            city:"chennai"
+        }
+        console.log(obj1)
+
+        //INORDER TO GET SINGLE VALUE FROM THE OBJECT WE HAVE TO GO FOR DOT NOTATAION W.R.T KEY...
+        console.log(obj1)
+        console.log(obj1.name)
+        console.log(obj1.city)
+
+        //INORDER TO ADD SINGLE VALUE INSIDE THE OBJECT WE HAVE TO GO FOR DOT NOTATION W.R.T KEYS...
+        console.log(obj1)
+
+        obj1.country="India"
+        console.log(obj1)
+
+        obj1.food="Briyani"
+        console.log(obj1)
+
+        //INORDER TO REMOVE THE ENTIRE ENTITY FROM AN OBJECT WE HAVE TO GO FOR DELETE METHOD...
+
+        delete obj1.name
+        console.log(obj1)
+
+        delete obj1.country
+        console.log(obj1)
+
+        let obj={
+            name:"Abhi",
+            age:21,
+            city:"chennai"
+        }
+        console.log(obj)
+
+        //KEYS...IT WILL RETURN ARRAY OF KEYS ALONE FROM THE OBJECT...
+        console.log(Object.keys(obj))
+
+        //VALUES...IT WILL RETURN ARRAY OF VALUES ALONE FROM THE OBJECT...
+        console.log(Object.values(obj))
+
+        //ENTRIES...IT WILL RETURN BOTH KEYS AND VALUES IN THE FORM OF ARRAY...
+        console.log(Object.entries(obj))
+
+        console.log(obj)
+
+        obj.food="Sambar Rice"
+        console.log(obj)
+
+        obj.drink="Pepsi"
+        console.log(obj)
+
+         //SEAL...IT IS USED TO UPDATE THE EXISTING VALUES BUT WE CANNOT MODIFY THE OBJECT...
+         console.log(Object.seal(obj))
+
+        obj.sweet="Laddu"
+        console.log(obj)
+
+        obj.name="Jaya"
+        console.log(obj)
+
+        //ISSEALED...IT WILL CHECK WHETHER THE OBJECT IS SEALED OR NOT...IF IT IS SEALED IT WILL RETURN TRUE ORELSE FALSE
+        console.log(Object.isSealed(obj))
+
+        //FREEZE...IN FREEZE WE CANNOT UPDATE THE EXISTING VALUES AS WELL AS WE CANNOT MODIFY THE OBJECT ALSO...
+        console.log(obj)
+
+        console.log(Object.freeze(obj))
+
+        obj.game="Cricket"
+        console.log(obj)
+
+        obj.name="Rama"
+        console.log(obj)
+        
+        //ISFROZEN...IT WILL WHETHER THE OBJECT IS FREEZZZED OR NOT...IT IS FREEZED IT RETURNS TRUE ORELSE FALSE...
+        console.log(Object.isFrozen(obj))
+
+
+
+
+
+
+    </script>
+</body>
+</html>

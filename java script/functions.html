@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // // named fuction
+        // function raja(){
+        //     console.log("hello iam raja...")
+        // }
+        // raja()
+
+        // //addition
+        // function add(a,b){
+        //     return a+b;
+        // }
+        // console.log(add(100,200))
+
+        // // subtraction
+        // function add(a,b){
+        //     return a-b;
+        // }
+        // console.log(add(500,400))
+
+        // // or
+
+        // let x=sub(60,40)
+        // console.log(x)
+
+        // // function expression
+        // let chinnu= function dinga(){
+        //     console.log("iam dinga frnd of dingi")
+        // }
+        // chinnu()
+
+        // let minnu= function dinga(){
+        //     console.log("hello nani")
+        // }
+        // minnu()
+
+        // // anonymous function
+
+        // // IIFE
+        // (function rani(){
+        //     console.log("iam IIEF")
+        // }) ();
+
+        // Call Back Fuction
+
+        function raja (a,b){
+            return a+b
+        }
+        console.log(30,40)
+
+        function rani(a){
+            console.log("I am raja....")
+            a()
+        }
+        rani(function robo(){
+            console.log("hiii chinnu...")
+        })
+
+
+        function dinga(a,b){
+            console.log("hello dinga....")
+            a()
+            b()
+        }
+        dinga(function bujji(){
+            console.log("iam bujji.....")
+        },
+        function bunny(){
+            console.log("i am bunny......")
+        })
+
+        // Higher order function
+
+        // higher order function is the function which accepts another functions parameter
+
+        function calculate(c){
+            return c+500
+        }
+
+        function bonus(a,b){
+            let res=a(b)
+            console.log(res)
+        }
+        bonus(calculate,100)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

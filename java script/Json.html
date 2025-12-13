@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //JSON.PARSE()...IT IS USED TO CONVERT JSON OBJECT TO NORMAL OBJECT...
+        let jsonstring=`{
+            "Name":"Raja",
+            "Age":23,
+            "City":"Kochi",
+            "Country":"India"
+        }`
+        console.log(jsonstring)
+
+        let a=JSON.parse(jsonstring)
+        console.log(a)
+
+        //JSON.STRINGIFY...IT WILL CONVERT NORMAL OBJECT TO JSON OBJECT...
+        let obj={
+            Name:"Chintu",
+            Age:34,
+            City:"Banglore",
+            Country:"India"
+        }
+        console.log(obj)
+
+        let b=JSON.stringify(obj)
+        console.log(b)
+
+    </script>
+</body>
+</html>

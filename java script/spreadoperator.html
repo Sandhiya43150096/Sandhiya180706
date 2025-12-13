@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //NORMAL WAY (ARRAY)
+
+        let arr=[1,2,3,4]
+        console.log(arr)
+
+        let arr1=[5,6,7,8]
+        console.log(arr1)
+
+        let arr2=[1,2,3,4,5,6,7,8]
+        console.log(arr2)
+
+        //SPREAD OPERATOR (ARRAY)
+
+        let names1=["raja","rani","chinnu"]
+        console.log(names1)
+
+        let names2=[...names1,"minnu","bunny","bujji"]
+        console.log(names2)
+
+        let names3=[...names2,"dinga","dingi"]
+        console.log(names3)
+
+        //NORMAL WAY (OBJECT)
+
+        let obj={
+            name:"raja",
+            age:23
+        }
+        console.log(obj)
+
+        let obj1={
+            city:"chennai",
+            country:"india"        
+        }
+        console.log(obj1)
+
+        let obj2={
+            name:"raja",
+            age:23,
+            city:"chennai",
+            country:"india"
+        }
+        console.log(obj2)
+
+        //SPREAD OPERATOR (OBJECT)
+
+        let person1={
+            name:"rajesh",
+            age:23
+        }
+        console.log(person1)
+
+        let person2={
+            ...person1,
+            city:"kochi",
+            country:"india"
+        }
+        console.log(person2)
+
+        let person3={
+            ...person2,
+            food:"briyani",
+            sweet:"jamun"
+        }
+        console.log(person3)
+
+    </script>
+
+</body>
+</html>

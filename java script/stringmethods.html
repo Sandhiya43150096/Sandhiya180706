@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Single Quotes
+
+        let a='Hello World...'
+        console.log(a)
+
+        let b='HII CHINNU...'
+        console.log(b)
+
+        //Double Quotes
+
+        let c="Hello World..."
+        console.log(c)
+
+        let d="HII CHINNU..."
+        console.log(d)
+
+        //String Literals
+
+        let x="Morning..."
+
+        console.log("Good")
+
+        console.log("Good"+ x + "ALL") //General way
+
+        console.log(`Good ${x}`)
+
+        console.log(`Good "Morning"`)
+
+        let str="abi is a software engineer"
+        console.log(str)
+
+       // Length....it is used to provide the length of the string...
+       console.log(str)
+       console.log(str.length)
+
+       //concat...it is used to add a new string value to the existed string value...
+       console.log(str)
+       console.log(str.concat("as well as a dancer"))
+
+       //Replace...it is used to replace the string with the existed string where we have to provide the replaced string value...
+       console.log(str)
+       console.log(str.replace("abi","sanjith.."))
+
+       //touppercase...it is used to convert the entire string into uppercase
+       console.log(str)
+       console.log(str.toUpperCase())
+
+       //tolowercase...it is used to convert the entire string into lowercase
+       console.log(str)
+       console.log(str.toLowerCase())
+
+       //Slice...it is used to extract a part of the string...where we have provide two values
+       console.log(str)
+       console.log(str.slice(9,17))
+       console.log(str.slice(18,26))
+
+       //Indexof...it is used to get the indexvalue of a particular character...
+       console.log(str)
+       console.log(str.indexOf("a"))
+       console.log(str.indexOf("t"))
+
+       //LastindexOf...it will provide the last index of a character when we have multiple characters with the same type...
+       console.log(str)
+       console.log(str.lastIndexOf("e"))
+
+       //Trimstart...it is used to remove the empty space at the beginning of the string...
+       console.log(str)
+       console.log(str.trimStart())
+
+       //Trimend...it is used to remove the empty space at the ending of the string...
+       console.log(str)
+       console.log(str.trimEnd())
+
+       //Repeat...it is used to repeat the string value N no of times where it is mandatory to provide the numerical value...
+       console.log(str)
+       console.log(str.repeat(3))
+
+       //Includes...it will check whether the value is present or not...if it is present it will return true orelse it will return false...
+       console.log(str)
+       console.log(str.includes("e"))
+       console.log(str.includes("z"))
+
+       //Match...it will also check whether the character is present or not if it is present it will give some information about the character orelse it will give null
+       console.log(str)
+       console.log(str.match("w"))
+       console.log(str.match("x"))
+
+       //charAt...it is used to provide the individual character from the entire string...
+       console.log(str)
+       console.log(str.charAt(10))
+       console.log(str.charAt(5))
+
+       //charcodeAt...it is used to provide ASCII values of an individual character where ASCII values starts from A-65,a-97...
+       console.log(str)
+       console.log(str.charCodeAt(5))
+       console.log(str.charCodeAt(10))
+
+       //Padstart...it is used to add a new string value at the beginning of the string where it is manadatory to provide two values they are length and fullfillstring... 
+       let y="bunny"
+       console.log(y)   
+
+       console.log(y.padStart(15,"HELLO"))
+
+       //padend...it is used to add a new string value at the ending of the string where it is manadatory to provide two values they are length and fullfillstring...
+       console.log(y.padEnd(15,"HELLO"))
+
+    </script>
+</body>
+</html>

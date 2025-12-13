@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    let arr=[23,34,45,56,67]
+    console.log(arr)
+
+    //NORMAL WAY(INDEX VALUE) INORDER TO GET SINGLE VALUE...
+    console.log(arr[2])
+    console.log(arr[4])
+
+    //ARRAY DESTRUCTURING...
+    let arr1=[23,"Raja",45,"Rani","Dinga",89,"Minnu"]
+    console.log(arr1)
+
+    let [a,b,c,d,e,f,g,h]=arr1
+    console.log(h) //UNDEFINED
+    console.log(d)
+    console.log(b)
+    console.log(b)
+    console.log(f)
+
+
+    let obj={
+        name:"Raja",
+        age:23,
+        city:"Chennai",
+        country:"India"
+    }
+    console.log(obj)
+
+    //NORMAL WAY(DOT NOTATION)...INORDER TO GET SINGLE VALUE
+    console.log(obj.age)
+    console.log(obj.country)
+    console.log(obj.name)
+
+    //OBJECT DESTRUCTURING...
+
+    
+    let obj1={
+        Name:"Abhi",
+        age:40,
+        city:"Chennai",
+        Country:"uganda"
+    }
+    console.log(obj1)
+
+    let {Name,age,city,Country}=obj1
+    console.log(Name)
+    console.log(Country)
+    console.log(age)
+
+
+
+</script>
+
+</body>
+</html>
